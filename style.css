@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: gray;
+}
+
+.container {
+    text-align: center;
+    transition: filter .5s ease;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.card {
+    border: 1px solid black;
+    width: 10rem;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    transition: transform .2s ease;
+    background-color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 .5rem .5rem .5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0 .5rem;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem .5rem;
+}
+
+.grass {
+    background-color: green;
+    padding: .3rem;
+    
+}
+
+.poison {
+    background-color: blueviolet;
+    padding: .3rem;
+    
+}
+
+.fire {
+    background-color: red;
+    padding: .3rem;
+    
+}
+
+.bug {
+    background-color: burlywood;
+    padding: .3rem;
+    
+}
+
+.water {
+    background-color: aqua;
+    padding: .3rem;
+    
+}
+
+.flying {
+    background-color: orange;
+    padding: .3rem;
+    
+}
+
+.normal {
+    background-color: black;
+    padding: .3rem;
+    
+}
+
+.electric {
+    background-color: yellow;
+    padding: .3rem;
+    color: black;
+    
+}
+
+.ground {
+    background-color: brown;
+    padding: .3rem;
+    
+}
+
+.fairy {
+    background-color: violet;
+    padding: .3rem;
+    
+}
+
+.fighting {
+    background-color: chocolate;
+    padding: .3rem;
+    
+}
+
+.psychic {
+    background-color: teal;
+    padding: .3rem;
+    
+}
+
+.rock {
+    background-color: gray;
+    padding: .3rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+button {
+    width: 15rem;
+    height: 4rem;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    border: 1px solid cadetblue;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+button:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+/* Info card */
+
+.info {
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    transition: height .2s ease;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.info h2 {
+    text-transform: capitalize;
+}
+
+.show-info {
+    height: 80%;
+    background-color: beige;
+    overflow-y: scroll;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    /* height: 19rem; */
+}
+
+.flex img {
+    /* margin: 1rem; */
+    border: 1px solid black;
+    border-radius: 1rem;
+    cursor: auto;
+    width: 50%;
+    padding: 1rem 0 0 0;
+    /* height: 100%; */
+    background-color: white;
+}
+
+.info-pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-pokemon p,
+.info-pokemon a {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.abilities-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 .5rem;
+    margin: 0 0 .5rem 0;
+}
+
+.bar {
+    width: 100%;
+    height: 1rem;
+    background-color: gray;
+    border-radius: 2rem;
+}
+
+.bar-progress {
+    background-color: blue;
+    height: 1rem;
+    border-radius: 2rem;
+    color: white;
+    padding: 0 1rem 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    max-width: 100%;
+}
+
+.stats-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+}
+
+.stats-two h2 {
+    text-transform: uppercase;
+}
+
+.stats-two > div {
+    width: 15rem;
+}
+
+@media(max-width: 768px){
+    .flex {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-pokemon {
+        width: auto;
+    }
+}
+
+@media(max-width: 425px){
+    .info {
+        width: 90%;
+        left: 5%;
+    }
+}

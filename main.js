@@ -18,7 +18,7 @@ fetch(URL)
             let card = document.createElement('div')
             card.classList.add('card')
             card.innerHTML = `
-                <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}" draggable="false" class="holis">
+                <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}" draggable="false" class="pokemon-img">
                 <h2>${data.name}</h2>
                 <p class="id"><strong>ID:</strong> ${data.id}</p>
             `
@@ -45,7 +45,7 @@ let info = document.getElementById('info')
 
 app.addEventListener('click', (e) => {
     let target = e.target
-    if (target.classList.contains('holis')) {
+    if (target.classList.contains('pokemon-img')) {
         closeBtn.style.display = 'block'
         info.classList.add('show-info')
         document.getElementById('container').style.filter = 'contrast(.1)'
@@ -156,7 +156,7 @@ document.getElementById('addBtn').addEventListener('click', () => {
                 card.classList.add('card')
                 card.id = data.name
                 card.innerHTML = `
-                    <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}">
+                    <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}" class="pokemon-img">
                     <h2>${data.name}</h2>
                     <p><strong>ID:</strong> ${data.id}</p>
                 `

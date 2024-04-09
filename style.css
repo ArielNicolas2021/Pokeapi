@@ -183,8 +183,6 @@ button:hover {
 .info svg {
     position: absolute;
     width: 2rem;
-    border: 1px solid black;
-    border-radius: 50%;
     top: 0;
     right: 0;
     display: none;

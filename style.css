@@ -172,13 +172,22 @@ button:hover {
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     border-radius: 1rem;
     padding: 1rem;
 }
 
 .info h2 {
     text-transform: capitalize;
+}
+
+.info svg {
+    position: absolute;
+    width: 2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 .show-info {
@@ -192,17 +201,14 @@ button:hover {
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
-    /* height: 19rem; */
 }
 
 .flex img {
-    /* margin: 1rem; */
     border: 1px solid black;
     border-radius: 1rem;
     cursor: auto;
     width: 50%;
     padding: 1rem 0 0 0;
-    /* height: 100%; */
     background-color: white;
 }
 

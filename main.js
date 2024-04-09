@@ -18,7 +18,7 @@ fetch(URL)
             let card = document.createElement('div')
             card.classList.add('card')
             card.innerHTML = `
-                <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}" draggable="false">
+                <img src="${data.sprites.front_default}" alt="${data.name}" id="${data.name}" draggable="false" class="holis">
                 <h2>${data.name}</h2>
                 <p class="id"><strong>ID:</strong> ${data.id}</p>
             `
@@ -44,10 +44,12 @@ fetch(URL)
 let info = document.getElementById('info')
 
 app.addEventListener('click', (e) => {
-    info.classList.add('show-info')
-    document.getElementById('container').style.filter = 'contrast(.1)'
-    if (e.target.tagName === 'IMG') {
-        fetch(URL + e.target.getAttribute('id'))
+    let target = e.target
+    if (target.classList.contains('holis')) {
+        closeBtn.style.display = 'block'
+        info.classList.add('show-info')
+        document.getElementById('container').style.filter = 'contrast(.1)'
+        fetch(URL + target.getAttribute('id'))
         .then((response) => {
             if(response.ok) {return response.json()}
         })
@@ -129,9 +131,10 @@ app.addEventListener('click', (e) => {
         .catch((error) => {
             alert(error)
         })
-    } else {
+    }else {
         info.classList.remove('show-info')
         document.getElementById('container').style.filter = 'none'
+        closeBtn.style.display = 'none'
         info.removeChild(infoCard)
     }
 })
@@ -173,3 +176,11 @@ document.getElementById('addBtn').addEventListener('click', () => {
     })
 })
 
+let closeBtn = document.getElementById('closeBtn')
+
+closeBtn.addEventListener('click', () => {
+    info.classList.remove('show-info')
+    document.getElementById('container').style.filter = 'none'
+    info.removeChild(infoCard)
+    closeBtn.style.display = 'none'
+})
